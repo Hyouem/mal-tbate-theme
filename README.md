@@ -1,6 +1,6 @@
 # TBATE MyAnimeList Theme
 
-![Uploading Captura de tela 2026-07-16 132600.png…]()
+<img width="1904" height="911" alt="Captura de tela 2026-07-16 132600" src="https://github.com/user-attachments/assets/ef5943db-535f-4103-909f-e69ca5d10454" />
 
 Tema personalizado para a lista Classic do MyAnimeList, inspirado em **The Beginning After The End**, com:
 
