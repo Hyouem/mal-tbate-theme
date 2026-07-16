@@ -1,5 +1,7 @@
 # TBATE MyAnimeList Theme
 
+![Uploading image.png…]()
+
 Tema personalizado para a lista Classic do MyAnimeList, inspirado em **The Beginning After The End**, com:
 
 - fundo widescreen do Arthur;
