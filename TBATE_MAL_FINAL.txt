@@ -1,0 +1,2092 @@
+/*
+TBATE MyAnimeList Classic — Final Consolidated Version
+Owner: Hyouem
+Background: Arthur Leywin
+Final layout: transparent list, menu on the left, list on the right
+*/
+
+@import "https://malscraper.azurewebsites.net/covers/all/anime/presets/more";
+@import "https://yuiafterdark.github.io/shared/fixes/classic.css";
+@import "https://fonts.googleapis.com/css?family=Advent+Pro";
+
+* {
+    text-decoration: none;
+}
+
+body {
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwG7Ffnl9Xp3V0np4m1Gzfgs);
+    background-position: 24% 8%;
+    background-repeat: no-repeat no-repeat;
+    background-size: cover;
+    font-family: advent pro;
+}
+
+#inlineContent {
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwKYOlxWXFR0d1OrrzAVObcU);
+    background-position: 0 0;
+    background-repeat: no-repeat no-repeat;
+    display: inline-block !important;
+    height: 188px;
+    margin: auto !important;
+    position: fixed;
+    top: 0 !important;
+    width: 700px !important;
+    z-index: 4 !important;
+}
+
+#list_surround {
+    background-attachment: fixed;
+    background-position: 24% 0;
+    background-repeat: no-repeat no-repeat;
+    font-size: 15px;
+    height: 250px;
+    left: 15% !important;
+    line-height: 1;
+    margin: 0 auto;
+    padding-bottom: 13px;
+    padding-top: 133px;
+    position: absolute;
+    width: 700px;
+    z-index: 0;
+}
+
+a {
+    color: white;
+    text-shadow: none;
+}
+
+tr:hover td.td1 a, tr:hover td.td1, tr:hover td.td2 a, tr:hover td.td2 {
+    color: red;
+    font-weight: bold;
+    transition: all 0.4s ease 0s;
+}
+
+a:hover {
+    color: #3167A9 !important;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.table_header {
+}
+
+.table_header:first-of-type {
+    border-radius: 20px 0 0 0;
+}
+
+.table_header:nth-of-type(2) {
+    text-align: left;
+}
+
+.table_header:nth-of-type(5) {
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 20px;
+}
+
+.table_header, .category_totals {
+    background-color: #000000;
+    border: 0 none;
+    opacity: 1;
+    padding: 4px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.td1, .td2 {
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwLknT9Iqk0J3C_rblE_tWLc);
+    padding: 4px;
+}
+
+.td1:nth-of-type(2), .td2:nth-of-type(2) {
+    text-align: left;
+}
+
+.table_header:nth-of-type(6) {
+    display: none;
+    width: 0;
+}
+
+small {
+    color: red;
+    font-weight: bold;
+}
+
+.table_header, .td1, .td2, .category_totals {
+    color: grey;
+}
+
+.borderRBL {
+    line-height: normal !important;
+}
+
+[cellspacing="0"] {
+    line-height: 17px;
+}
+
+.category_totals {
+    background-color: black;
+    border-radius: 0 0 12px 12px;
+    text-align: center;
+}
+
+.category_totals:hover {
+    background-color: #C41E0E;
+    color: #FFFFFF;
+}
+
+[class^="header_"] * {
+    background-repeat: no-repeat no-repeat;
+    font-size: 0;
+    height: 200px;
+    line-height: 24px;
+    padding-bottom: 0;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.header_title {
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-style: italic;
+    height: auto;
+    padding: 0 8px 0 0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+#grand_totals {
+    background-color: rgba(234, 203, 82, 0.8);
+    border: 0 none;
+    border-radius: 3px 3px 3px 3px;
+    color: White;
+    line-height: 20px;
+    min-height: 20px;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.status_not_selected {
+    opacity: 0.7;
+    right: -183px !important;
+    transition: all 0.4s ease 0s;
+}
+
+.status_not_selected:hover {
+    color: transparent;
+    opacity: 1;
+    right: 3px !important;
+    transition: all 0.4s ease 0s;
+}
+
+[class^="status_"] a {
+    color: transparent;
+    display: block;
+    height: 100px;
+    opacity: 0;
+    width: 271px;
+}
+
+.header_cw {
+    background-color: transparent;
+	background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwPvAaTHnaLFUddbp1yuxhds);
+    background-position: 50% 0;
+    background-repeat: no-repeat no-repeat;
+    height: 200px;
+}
+[data-work="manga"] .header_cw {
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwEah4Z6B88TvUvRruXJiHcs);
+}
+
+.header_completed {
+    background-color: transparent;
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwGpJTf3WeVOa2Cjxb1QeYVQ);
+    background-position: 50% 0;
+    background-repeat: no-repeat no-repeat;
+    height: 200px;
+    z-index: 0;
+}
+
+.header_onhold {
+    background-color: transparent;
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwI_d40PNtOBx4lJNOFmsjQE);
+    background-position: 50% 0;
+    background-repeat: no-repeat no-repeat;
+    height: 200px;
+}
+
+.header_dropped {
+    background-color: transparent;
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwKYTPiUCKyBw0GpWmG6uw88);
+    background-position: 50% 0;
+    background-repeat: no-repeat no-repeat;
+    height: 200px;
+}
+
+.header_ptw {
+    background-color: transparent;
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwCnL5ElRXjYJZN6luqjXaA8);
+    background-position: 50% 0;
+    background-repeat: no-repeat no-repeat;
+    height: 200px;
+}
+
+#list_surround [class^="status_"] {
+    background-attachment: scroll;
+    background-color: transparent;
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwDdybjMYhKpwfM9URtD4470);
+    background-position: 0 0;
+    background-repeat: no-repeat no-repeat;
+    border: 2px solid black !important;
+    border-radius: 20px 0 0 0;
+    display: block;
+    height: 83px;
+    padding: 0;
+    position: fixed;
+    right: -3px;
+    top: 274px;
+    width: 271px;
+}
+[data-work="manga"] #list_surround [class^="status_"]:nth-of-type(1) {
+	background-image: url(https://i.ibb.co/DD6kXcC/category-reading.png);
+}
+
+#list_surround [class^="status_"]:nth-of-type(2) {
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwGlzYn9LNlQ4UaN_DkvqbCA);
+    border-top-left-radius: 0;
+    top: 360px;
+}
+
+#list_surround [class^="status_"]:nth-of-type(3) {
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwFZ8tqA612XaCXi6uIb-ksk);
+    top: 446px;
+}
+
+#list_surround [class^="status_"]:nth-of-type(4) {
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwKVSA2c_ixpMo1-AA2TDr4A);
+    top: 531px;
+}
+
+#list_surround [class^="status_"]:nth-of-type(5) {
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwCEwRbwqXncKD7qdZAmraQc);
+    top: 617px;
+}
+
+#list_surround [class^="status_"]:nth-of-type(6) {
+    background-image: url(https://image.myanimelist.net/ui/5LYzTBVoS196gvYvw3zjwJq3H24yUtwh9v678SZ9CC4);
+    border-bottom-left-radius: 20px;
+    top: 702px;
+}
+
+/* COVER AREA
+The surrounding area containing each cover pic which appears when you point to a row (requires #more CSS).
+Left and top adjust the position it appears on screen.
+Control the height and width of the pic with height and width.
+Remove only the border-radius: 25px 25px 25px 25px; lines to take the rounded corners away.
+Increase height and width to make the pics bigger.
+Delete border-style: solid; to remove the border.
+*/
+.hide {
+background-size: cover;
+left: 1%;
+top: 150px;
+height: 300px;
+width: 201px;
+border-style: solid;
+border-color: white;
+border-top: 1px solid white;;
+border-left: 1px solid white;
+border-right: 1px solid white;
+border-bottom: 1px solid white;
+border-radius: 25px 25px 25px 25px;
+background-color: rgba(0, 5, 0, 0.75);
+background-position: center 50% !important;
+background-repeat: no-repeat !Important;
+display: block !important;
+position: fixed;
+visibility: hidden;
+opacity: 0;
+transition: all 0.4s ease 0s;
+}
+
+/* PREVIEW MSG ABOVE COVERS
+Remove content: "preview"; to remove the PREVIEW text.
+Change the text in quotations after content to what you want it to say above your cover pic.
+Top and width controls the position of the text.
+*/
+.hide:before {
+background: transparent;
+color: white;
+content: "";
+padding-bottom: 5px;
+position: absolute;
+text-align: center;
+width: 225px;
+top: -25px;
+border-radius: 25px 25px 0 0;
+}
+
+/*
+MINI REVIEW (HOVER TAG)
+Move the area around with the left and top codes. 
+Adjust the surrounding area of the tags by adjusting the padding. 
+Control the height and width of the section with the height and width codes.
+
+If your tags/mini-reviews aren't hovering correctly or you need help understanding or adjusting the background color code, see the bottom of the original tutorial: 
+https://myanimelist.net/forum/?topicid=563993
+*/
+td[class^='td']:nth-of-type(6) {
+visibility: hidden;
+opacity: 0;
+position: fixed;
+top: 462px;
+left: 0px;
+background-color: rgba(20, 30, 255, 0.85) !important;
+border-color: white;
+border-radius: 25px 25px 25px 25px;
+border-style: solid;
+border-width: 1px;
+font-size: 12px;
+height: auto;
+width: 184px;
+padding: 12px 17px 16px 23px;
+color: white !important;
+z-index: 1;
+transition: all 0.4s ease 0s;
+}
+
+/* TAG TEXT COLOR*/
+tr:hover td[class^='td']:nth-of-type(6) a { 
+color: white !important; 
+}
+
+/* OTHER SETTINGS */
+:hover + .hide , tr:hover td[class^='td']:nth-of-type(6){
+visibility: visible;
+opacity: 1;
+}
+
+/* REMOVE TABLE HEADER
+Deletes the table header Tags which isn't necessary.
+*/
+.table_header:nth-of-type(6) {
+display: none !important;
+}
+
+/* REMOVE TAG EDIT BUTTON
+Deletes the Tag's edit link which will is inaccessible with this setup, use the edit button by Animetitle to edit your tags.
+*/
+td:nth-of-type(6) small {
+display: none;
+}
+
+/* HIDE MORE BUTTON */
+#list_surround div[style="float: right;"] {
+   visibility: hidden;
+}
+#list_surround .List_LightBox {
+    visibility: visible !important;
+    float: right;
+}
+
+/* GOOGLE CHROME FIX 
+Adjust this amount 50px at a time if your columns are uneven in Chrome. 
+*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+td[class^='td']:nth-of-type(2) {
+width: 470px !important;}
+}
+
+#copyright, #copyright:hover {
+    background-color: #C41E0E;
+    border-radius: 5px 5px 5px 5px;
+    bottom: 0;
+    color: white;
+    padding: 2px;
+    width: 100%;
+}
+
+#copyright:before {
+    color: white;
+    content: " Design by SylakentH, got the idea from Stark700s layout. Greets!";
+    font-size: 12px;
+    padding-right: 10px;
+}
+
+#copyright:after {
+    color: gold;
+    content: " ";
+    padding-left: 20px;
+}
+
+/*
+COLOR OF THE ICONS
+Change the color, and adjust the opacity for brighter color. 
+Remove the display: none to match the selected icon to the other icons.
+*/
+#mal\_cs\_listinfo:before,  #mal\_cs\_links:before, #mal\_cs\_otherlinks:before,  #mal\_cs\_powered:before {
+    background: transparent;
+    opacity: .9;
+}
+
+/*
+BORDER OF ICONS
+If you're having trouble seeing the border bottom, lower the height by a pixel or two until you see it.
+*/
+#mal_cs_listinfo:before,  #mal_cs_links:before,  #mal_cs_otherlinks:before, #mal_cs_powered:before,  #mal\_cs\_listinfo:before, #mal\_cs\_links:before, #mal\_cs\_otherlinks:before, #mal\_cs\_powered:before {
+    border-color: ;
+    border-style: ;
+    border-width: ;
+    height: 32px !important;
+}
+
+/*
+BUTTONS COLOR AND BORDER
+Buttons within the hover menus, not the icons themselves. 
+Second code is for button color on hover. 
+*/
+#mal_cs_listinfo a,  #mal_cs_links a,  #mal_cs_otherlinks a, #mal_cs_powered a img {
+    background-color: rgba(64, 60, 90, 0.6) !important;
+    border-color: transparent;
+    border-style: solid !important;
+    border-width: 1px !important;
+}
+
+#mal\_cs\_listinfo a:hover,  #mal\_cs\_links a:hover,  #mal\_cs\_otherlinks a:hover,  #mal_cs_powered a img:hover {
+    background-color: #403C5A !important;
+}
+
+/*
+COLOR OF HOVER MENUS AND SELECTED ICONS
+Remove display none from the second code to match the colors of the selected icon to the icons above. 
+*/
+#mal\_cs\_listinfo div,  #mal\_cs\_links div,  #mal\_cs\_otherlinks div, #mal\_cs\_powered div,  #mal\_cs\_powered dd,  #mal\_cs\_powered a  {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+#mal\_cs\_listinfo:hover:before,  #mal\_cs\_links:hover:before, #mal\_cs\_otherlinks:hover:before,  #mal\_cs\_powered:hover:before, #mal\_cs\_listinfo:hover:after,  #mal\_cs\_links:hover:after, #mal\_cs\_otherlinks:hover:after,  #mal\_cs\_powered:hover:after {
+    display: none;
+    background-color: ;
+    opacity: .2;
+}
+
+/*
+COLOR OF USERNAME (for visitors)
+You don't see this username on the menus when you're logged in, log out to see it. 
+*/
+#mal\_cs\_otherlinks strong a {
+    color: #333333 !important;
+}
+
+#mal\_cs\_otherlinks strong a:hover {
+    color: blue !important;
+    background-color: transparent !important;
+}
+
+/*
+POSITION OF TOP BAR
+Change to absolute if you want it to not scroll with the page.
+*/
+#mal\_control\_strip
+{
+    position: fixed !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/*
+OTHER CODES
+If you want to change out the icon images themselves, you can scroll down through the codes and find the background images and change them with your own.
+*/
+#mal\_cs\_listinfo,  #mal\_cs\_links,  #mal\_cs\_otherlinks, #mal\_cs\_powered {
+    -moz-box-sizing: border-box;
+    transition: all 0.4s ease 0s;
+    background: none no-repeat scroll 100% 0 transparent;
+    border: 0 none;
+    height: 0 !important;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    text-align: center;
+    top: 4px;
+    width: 150px;
+    z-index: 10;
+}
+
+#mal\_cs\_listinfo:hover,  #mal\_cs\_links:hover, #mal\_cs\_otherlinks:hover,  #mal\_cs\_powered:hover {
+    height: 200px !important;
+    padding-top: 32px;
+    width: 150px;
+}
+
+#mal\_cs\_listinfo div,  #mal\_cs\_links div,  #mal\_cs\_otherlinks div, #mal\_cs\_powered div,  #mal\_cs\_powered dd {
+    transition: opacity 0.4s ease-in-out 0s;
+    border-radius: 3px 0 0 0;
+    font-size: 0 !important;
+    line-height: 0;
+    margin: 0 !important;
+    opacity: 0;
+    padding: 8px 0 0;
+}
+
+#mal\_cs\_listinfo:hover div,  #mal\_cs\_links:hover div, #mal\_cs\_otherlinks:hover div,  #mal\_cs\_powered:hover div, #mal\_cs\_powered:hover dd {
+    opacity: 1;
+}
+
+#mal\_cs\_listinfo div:nth-of-type(2),  #mal\_cs\_links div:nth-of-type(2), #mal\_cs\_otherlinks div:nth-of-type(2),  #mal\_cs\_powered div:nth-of-type(2) {
+    border-radius: 0 0 3px 3px;
+    padding: 4px 0 8px;
+}
+
+#mal\_cs\_listinfo a,  #mal\_cs\_links a,  #mal\_cs\_otherlinks a, #mal\_cs\_powered a {
+    background-color: rgba(64, 60, 90, 0.6);
+    border-radius: 3px 3px 3px 3px;
+    display: block;
+    font: 13px/17px arial,sans-serif;
+    margin: 4px 12px 0;
+    padding: 3px 0;
+    text-decoration: none;
+}
+
+#mal\_cs\_listinfo a:nth-of-type(1),  #mal\_cs\_links a:nth-of-type(1),  #mal\_cs\_otherlinks a:nth-of-type(1),  #mal\_cs\_powered a:nth-of-type(1) {
+    margin-top: 0;
+}
+
+#mal\_cs\_listinfo strong a strong {
+    font-weight: normal;
+}
+
+#mal\_cs\_otherlinks strong {
+    color: #333333;
+    display: block;
+    font: bold 13px/17px arial,sans-serif !important;
+    padding: 0 4px 4px;
+    text-shadow: 0 1px 1px #FFFFFF;
+}
+
+#mal\_cs\_otherlinks strong a {
+    background: none repeat scroll 0 0 transparent !important;
+    border-color: transparent !important;
+    border-radius: 0 0 0 0;
+    color: #333333;
+    display: inline;
+    font: bold 13px/17px arial,sans-serif !important;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 1px 1px #FFFFFF;
+}
+
+#mal\_cs\_powered a {
+    border-radius: 3px 0 0 0 !important;
+    display: block !important;
+    margin: 0 !important;
+    opacity: 0;
+    padding: 8px 0 0 !important;
+}
+
+#mal\_cs\_powered:hover a {
+    opacity: 1;
+}
+
+#mal\_cs\_powered a img {
+    background: url(https://i.ibb.co/pPWQv6B/myanimelist.png) /* myanimelist.png */ no-repeat scroll 50% 6px rgba(64, 60, 90, 0.6);
+    border-radius: 3px 3px 3px 3px;
+    display: block;
+    height: 0;
+    margin: 0 12px;
+    padding: 23px 0 0 126px;
+    width: 0;
+}
+
+#mal\_cs\_powered a img:hover {
+    background-color: #403C5A;
+}
+
+#mal\_cs\_powered #search {
+    border-radius: 0 0 3px 3px;
+    padding: 8px;
+    position: relative;
+}
+
+#mal\_cs\_powered #search #searchBox {
+    -moz-box-sizing: border-box;
+    border-color: #BCBCBC #D6D6D6 #D6D6D6;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    color: #333333;
+    display: inline-block;
+    font-family: arial,sans-serif;
+    font-size: 13px;
+    height: 28px;
+    padding-left: 6px;
+    padding-right: 24px;
+    vertical-align: top;
+    width: 100%;
+}
+
+#mal\_cs\_powered #search #searchBox:hover,  #mal\_cs\_powered #search #searchBox:focus {
+    border-color: #ACACAC #C6C6C6 #C6C6C6;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+#mal\_cs\_powered #search #searchListButton {
+    background:  url(https://i.ibb.co/SxV4gzB/search-icon.png) /* search_bar.png */ no-repeat scroll 0 0 transparent;
+    border-radius: 3px 3px 3px 3px;
+    height: 0;
+    margin: 0;
+    padding: 16px 0 0 16px;
+    position: absolute;
+    right: 12px;
+    top: 14px;
+    width: 0;
+}
+
+#mal\_cs\_listinfo {
+    background-image: url(https://i.ibb.co/NNccKH7/user.png);
+    right: 106px;
+}
+
+#mal\_cs\_listinfo:hover {
+    background-image: url(https://i.ibb.co/Yhf4N0w/user-hover.png);
+}
+
+#mal\_cs\_links {
+    background-image: url(https://i.ibb.co/hFT8gkS/home.png);
+    right: 72px;
+    z-index: 9;
+}
+
+#mal\_cs\_links:hover {
+    background-image: url(https://i.ibb.co/dKxvT8B/home-hover.png);
+}
+
+#mal\_cs\_otherlinks {
+    background-image: url(https://i.ibb.co/Bf6gHFZ/stats.png);
+    right: 38px;
+    z-index: 8;
+}
+
+#mal\_cs\_otherlinks:hover {
+    background-image: url(https://i.ibb.co/F5psvrf/stats-hover.png);
+}
+
+#mal\_cs\_powered {
+    background-image: url(https://i.ibb.co/Jt01K4S/search.png);
+    right: 4px !important;
+    z-index: 7;
+}
+
+#mal\_cs\_powered:hover {
+    background-image: url(https://i.ibb.co/255PjyY/search-hover.png);
+}
+
+td#mal\_cs\_pic a img {
+    display: none;
+}
+
+#mal\_cs\_pic, #mal\_cs\_listinfo, #mal\_cs\_links {
+    border-right: 0 none !important;
+}
+
+#mal\_cs\_listinfo,  #mal\_cs\_links,  #mal\_cs\_otherlinks, #mal\_cs\_powered {
+    padding: 32px 0 0 !important;
+}
+
+/* preload images */
+#mal_control_strip tbody {
+	background-image:
+		url(https://i.ibb.co/Yhf4N0w/user-hover.png),
+		url(https://i.ibb.co/dKxvT8B/home-hover.png),
+		url(https://i.ibb.co/F5psvrf/stats-hover.png),
+		url(https://i.ibb.co/255PjyY/search-hover.png);
+	background-size: 0;
+}
+
+#searchBox {
+    width: 128px !important;
+    margin-left: 1px;
+}
+
+#mal_cs_powered #search #searchListButton {
+    right: 15px !important;
+    top: 12px !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+#searchBox {
+    width: 96px !important;
+}
+}
+
+/* =========================================================
+   TBATE V3 — transparent layout, no top banner
+   ========================================================= */
+
+html {
+    background:
+        none center top / cover no-repeat fixed #07030f !important;
+    min-height: 100%;
+}
+
+body {
+    background:
+        linear-gradient(rgba(8, 2, 16, 0.28), rgba(8, 2, 16, 0.18)),
+        none center top / cover no-repeat fixed !important;
+    background-color: transparent !important;
+    min-height: 100vh;
+    color: #eadfff;
+}
+
+/* remove o banner superior */
+#inlineContent {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    background: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+#list_surround {
+    background: transparent !important;
+    padding-top: 10px !important;
+    top: 0 !important;
+    left: 15% !important;
+    height: auto !important;
+}
+
+a {
+    color: #f1e6ff !important;
+}
+
+a:hover {
+    color: #c79bff !important;
+    text-shadow: 0 0 8px rgba(179, 113, 255, 0.45) !important;
+}
+
+tr:hover td.td1 a,
+tr:hover td.td1,
+tr:hover td.td2 a,
+tr:hover td.td2 {
+    color: #d6b4ff !important;
+    font-weight: normal !important;
+}
+
+.table_header,
+.category_totals {
+    background: rgba(12, 4, 23, 0.28) !important;
+    color: #cdb2ef !important;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(163, 96, 255, 0.18) !important;
+}
+
+.td1,
+.td2 {
+    background: rgba(11, 3, 20, 0.22) !important;
+    color: #eadfff !important;
+    border-bottom: 1px solid rgba(163, 96, 255, 0.14);
+    backdrop-filter: blur(2px);
+}
+
+.td2 {
+    background: rgba(18, 6, 30, 0.18) !important;
+}
+
+#grand_totals {
+    background: rgba(26, 10, 43, 0.36) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(163, 96, 255, 0.2) !important;
+}
+
+.category_totals {
+    background: rgba(17, 7, 28, 0.33) !important;
+}
+
+.category_totals:hover {
+    background: rgba(76, 34, 126, 0.52) !important;
+    color: #fff !important;
+}
+
+small {
+    color: #d7b4ff !important;
+}
+
+/* headers sem banner: só imagem à esquerda e texto */
+[class^="header_"] {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    height: 112px !important;
+    margin-top: 10px !important;
+    position: relative;
+    overflow: visible !important;
+}
+
+[class^="header_"] * {
+    background: none !important;
+    height: 112px !important;
+    line-height: 112px !important;
+    font-size: 0 !important;
+    padding: 0 !important;
+}
+
+.header_title {
+    display: none !important;
+}
+
+.header_cw::before,
+.header_completed::before,
+.header_onhold::before,
+.header_dropped::before,
+.header_ptw::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: -4px;
+    width: 235px;
+    height: 118px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    pointer-events: none;
+}
+
+.header_cw::after,
+.header_completed::after,
+.header_onhold::after,
+.header_dropped::after,
+.header_ptw::after {
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    color: #f0e4ff;
+    font-family: "Advent Pro", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-shadow: 0 0 8px rgba(162, 93, 255, 0.55);
+    pointer-events: none;
+}
+
+.header_cw::before { background-image: none; }
+.header_completed::before { background-image: none; }
+.header_onhold::before { background-image: none; }
+.header_dropped::before { background-image: none; }
+.header_ptw::before { background-image: none; }
+
+.header_cw::after { content: "WATCHING"; }
+[data-work="manga"] .header_cw::after { content: "READING"; }
+.header_completed::after { content: "COMPLETED"; }
+.header_onhold::after { content: "ON HOLD"; }
+.header_dropped::after { content: "DROPPED"; }
+.header_ptw::after { content: "PLAN TO WATCH"; }
+[data-work="manga"] .header_ptw::after { content: "PLAN TO READ"; }
+
+/* menu lateral sempre visível com título inteiro; imagem só no hover */
+.status_not_selected {
+    opacity: 0.95 !important;
+    right: 3px !important;
+    transition: opacity 0.25s ease !important;
+}
+
+.status_not_selected:hover {
+    right: 3px !important;
+    opacity: 1 !important;
+}
+
+#list_surround [class^="status_"] {
+    right: 3px !important;
+    width: 271px !important;
+    background: rgba(18, 7, 31, 0.42) !important;
+    border: 1px solid rgba(162, 92, 255, 0.35) !important;
+    border-radius: 16px 0 0 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(6) {
+    border-bottom-left-radius: 16px !important;
+}
+
+#list_surround [class^="status_"] a {
+    width: 271px !important;
+    height: 83px !important;
+}
+
+#list_surround [class^="status_"]::before {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f0e4ff;
+    font-family: "Advent Pro", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    white-space: nowrap;
+    text-shadow: 0 0 7px rgba(162, 92, 255, 0.46);
+    z-index: 1;
+    pointer-events: none;
+}
+
+#list_surround [class^="status_"]::after {
+    content: "";
+    position: absolute;
+    right: 4px;
+    bottom: 0;
+    width: 112px;
+    height: 88px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+#list_surround [class^="status_"]:hover::after {
+    opacity: 1;
+}
+
+#list_surround [class^="status_"]:nth-of-type(1)::before { content: "WATCHING"; }
+[data-work="manga"] #list_surround [class^="status_"]:nth-of-type(1)::before { content: "READING"; }
+#list_surround [class^="status_"]:nth-of-type(2)::before { content: "COMPLETED"; }
+#list_surround [class^="status_"]:nth-of-type(3)::before { content: "ON HOLD"; }
+#list_surround [class^="status_"]:nth-of-type(4)::before { content: "DROPPED"; }
+#list_surround [class^="status_"]:nth-of-type(5)::before { content: "PLAN TO WATCH"; }
+[data-work="manga"] #list_surround [class^="status_"]:nth-of-type(5)::before { content: "PLAN TO READ"; }
+#list_surround [class^="status_"]:nth-of-type(6)::before { content: "ALL ANIME"; }
+
+#list_surround [class^="status_"]:nth-of-type(1)::after { background-image: none; }
+#list_surround [class^="status_"]:nth-of-type(2)::after { background-image: none; }
+#list_surround [class^="status_"]:nth-of-type(3)::after { background-image: none; }
+#list_surround [class^="status_"]:nth-of-type(4)::after { background-image: none; }
+#list_surround [class^="status_"]:nth-of-type(5)::after { background-image: none; }
+#list_surround [class^="status_"]:nth-of-type(6)::after { 
+    background-image: none; 
+    opacity: 1;
+}
+
+/* preview e review seguem translúcidos */
+.hide {
+    background-color: rgba(12, 4, 22, 0.82) !important;
+    border-color: rgba(205, 160, 255, 0.85) !important;
+    box-shadow: none !important;
+}
+
+.hide:before {
+    color: #e8d7ff !important;
+}
+
+td[class^='td']:nth-of-type(6) {
+    background-color: rgba(49, 18, 80, 0.80) !important;
+    border-color: rgba(205, 160, 255, 0.75) !important;
+    color: #fff !important;
+}
+
+/* barra superior */
+#mal\_control\_strip {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+#mal_cs_listinfo a,
+#mal_cs_links a,
+#mal_cs_otherlinks a,
+#mal_cs_powered a img,
+#mal\_cs\_listinfo a,
+#mal\_cs\_links a,
+#mal\_cs\_otherlinks a {
+    background-color: rgba(47, 20, 70, 0.68) !important;
+}
+
+#mal\_cs\_listinfo a:hover,
+#mal\_cs\_links a:hover,
+#mal\_cs\_otherlinks a:hover,
+#mal_cs_powered a img:hover {
+    background-color: rgba(88, 44, 139, 0.88) !important;
+}
+
+#mal\_cs\_listinfo div,
+#mal\_cs\_links div,
+#mal\_cs\_otherlinks div,
+#mal\_cs\_powered div,
+#mal\_cs\_powered dd,
+#mal\_cs\_powered a {
+    background-color: rgba(27, 10, 42, 0.72) !important;
+}
+
+#mal\_cs\_otherlinks strong a {
+    color: #e5d3ff !important;
+}
+
+#mal\_cs\_otherlinks strong a:hover {
+    color: #c79bff !important;
+}
+
+#copyright,
+#copyright:hover {
+    background-color: rgba(56, 18, 92, 0.68) !important;
+    color: #ffffff !important;
+}
+
+#copyright:before {
+    color: #ffffff !important;
+    content: " TBATE — Arthur, Sylvie & Tessia";
+}
+
+#copyright:after {
+    color: #d5b0ff !important;
+    content: " • A second life, a different ending.";
+}
+
+/* =========================================================
+   MENU LATERAL — CORREÇÃO V3.1
+   Única alteração desta versão.
+   Visual e animação restaurados para o padrão da v2.
+   ========================================================= */
+
+/* Desativa somente os textos e imagens artificiais da v3
+   nos cinco primeiros itens. */
+#list_surround [class^="status_"]:nth-of-type(1)::before,
+#list_surround [class^="status_"]:nth-of-type(2)::before,
+#list_surround [class^="status_"]:nth-of-type(3)::before,
+#list_surround [class^="status_"]:nth-of-type(4)::before,
+#list_surround [class^="status_"]:nth-of-type(5)::before,
+#list_surround [class^="status_"]:nth-of-type(1)::after,
+#list_surround [class^="status_"]:nth-of-type(2)::after,
+#list_surround [class^="status_"]:nth-of-type(3)::after,
+#list_surround [class^="status_"]:nth-of-type(4)::after,
+#list_surround [class^="status_"]:nth-of-type(5)::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Restaura tamanho, formato, bordas e comportamento da v2. */
+#list_surround [class^="status_"]:nth-of-type(1),
+#list_surround [class^="status_"]:nth-of-type(2),
+#list_surround [class^="status_"]:nth-of-type(3),
+#list_surround [class^="status_"]:nth-of-type(4),
+#list_surround [class^="status_"]:nth-of-type(5) {
+    background-attachment: scroll !important;
+    background-color: transparent !important;
+    background-position: 0 0 !important;
+    background-repeat: no-repeat !important;
+    background-size: 271px 83px !important;
+    border: 2px solid #190a29 !important;
+    border-radius: 20px 0 0 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+    height: 83px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: fixed !important;
+    right: -105px !important;
+    width: 271px !important;
+    opacity: 0.78 !important;
+    transition:
+        right 0.4s ease,
+        opacity 0.4s ease !important;
+}
+
+/* Igual à v2: os itens abaixo do primeiro não têm o canto
+   superior esquerdo arredondado. */
+#list_surround [class^="status_"]:nth-of-type(2),
+#list_surround [class^="status_"]:nth-of-type(3),
+#list_surround [class^="status_"]:nth-of-type(4),
+#list_surround [class^="status_"]:nth-of-type(5) {
+    border-top-left-radius: 0 !important;
+}
+
+/* Mantém o título completo visível; no hover a arte entra
+   pela lateral e o botão abre até a largura total. */
+#list_surround [class^="status_"]:nth-of-type(1):hover,
+#list_surround [class^="status_"]:nth-of-type(2):hover,
+#list_surround [class^="status_"]:nth-of-type(3):hover,
+#list_surround [class^="status_"]:nth-of-type(4):hover,
+#list_surround [class^="status_"]:nth-of-type(5):hover {
+    right: 3px !important;
+    opacity: 1 !important;
+}
+
+/* O link invisível continua ocupando o botão inteiro. */
+#list_surround [class^="status_"]:nth-of-type(1) a,
+#list_surround [class^="status_"]:nth-of-type(2) a,
+#list_surround [class^="status_"]:nth-of-type(3) a,
+#list_surround [class^="status_"]:nth-of-type(4) a,
+#list_surround [class^="status_"]:nth-of-type(5) a {
+    color: transparent !important;
+    display: block !important;
+    height: 83px !important;
+    opacity: 0 !important;
+    width: 271px !important;
+}
+
+/* Novas artes: título completo à esquerda e imagem à direita. */
+#list_surround [class^="status_"]:nth-of-type(1) {
+    background-image: none !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(2) {
+    background-image: none !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(3) {
+    background-image: none !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(4) {
+    background-image: none !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(5) {
+    background-image: none !important;
+}
+
+/* All Anime permanece exatamente como está na v3. */
+
+/* =========================================================
+   MENU LATERAL — AJUSTE V3.2
+   Somente os cinco botões laterais foram alterados.
+   - tamanho menor;
+   - títulos completos;
+   - imagem totalmente escondida até o hover;
+   - imagem entra deslizando pela direita.
+   ========================================================= */
+
+/* Remove as artes completas da v3.1, evitando que qualquer
+   personagem apareça antes do hover. */
+#list_surround [class^="status_"]:nth-of-type(1),
+#list_surround [class^="status_"]:nth-of-type(2),
+#list_surround [class^="status_"]:nth-of-type(3),
+#list_surround [class^="status_"]:nth-of-type(4),
+#list_surround [class^="status_"]:nth-of-type(5) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(12, 4, 24, 0.92),
+            rgba(35, 11, 58, 0.88)
+        ) !important;
+    background-color: transparent !important;
+    background-size: 100% 100% !important;
+    border: 1px solid rgba(155, 82, 245, 0.66) !important;
+    border-radius: 16px 0 0 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+    height: 68px !important;
+    width: 235px !important;
+    right: -67px !important;
+    opacity: 0.82 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    transition:
+        right 0.38s ease,
+        opacity 0.38s ease !important;
+}
+
+/* Espaçamento vertical menor para acompanhar o novo tamanho. */
+#list_surround [class^="status_"]:nth-of-type(1) {
+    top: 274px !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(2) {
+    top: 344px !important;
+    border-top-left-radius: 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(3) {
+    top: 414px !important;
+    border-top-left-radius: 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(4) {
+    top: 484px !important;
+    border-top-left-radius: 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(5) {
+    top: 554px !important;
+    border-top-left-radius: 0 !important;
+}
+
+/* Abre o botão até a largura total. */
+#list_surround [class^="status_"]:nth-of-type(1):hover,
+#list_surround [class^="status_"]:nth-of-type(2):hover,
+#list_surround [class^="status_"]:nth-of-type(3):hover,
+#list_surround [class^="status_"]:nth-of-type(4):hover,
+#list_surround [class^="status_"]:nth-of-type(5):hover {
+    right: 3px !important;
+    opacity: 1 !important;
+}
+
+/* Links continuam invisíveis, ocupando todo o botão. */
+#list_surround [class^="status_"]:nth-of-type(1) a,
+#list_surround [class^="status_"]:nth-of-type(2) a,
+#list_surround [class^="status_"]:nth-of-type(3) a,
+#list_surround [class^="status_"]:nth-of-type(4) a,
+#list_surround [class^="status_"]:nth-of-type(5) a {
+    display: block !important;
+    height: 68px !important;
+    width: 235px !important;
+    opacity: 0 !important;
+}
+
+/* Títulos separados da imagem: sempre completos e visíveis. */
+#list_surround [class^="status_"]:nth-of-type(1)::before,
+#list_surround [class^="status_"]:nth-of-type(2)::before,
+#list_surround [class^="status_"]:nth-of-type(3)::before,
+#list_surround [class^="status_"]:nth-of-type(4)::before,
+#list_surround [class^="status_"]:nth-of-type(5)::before {
+    display: block !important;
+    position: absolute !important;
+    left: 16px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: #eee0ff !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    letter-spacing: 0.2px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    text-shadow: 0 0 7px rgba(164, 93, 255, 0.44) !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(1)::before {
+    content: "WATCHING" !important;
+}
+
+[data-work="manga"] #list_surround [class^="status_"]:nth-of-type(1)::before {
+    content: "READING" !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(2)::before {
+    content: "COMPLETED" !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(3)::before {
+    content: "ON HOLD" !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(4)::before {
+    content: "DROPPED" !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(5)::before {
+    content: "PLAN TO WATCH" !important;
+    font-size: 12px !important;
+}
+
+[data-work="manga"] #list_surround [class^="status_"]:nth-of-type(5)::before {
+    content: "PLAN TO READ" !important;
+    font-size: 13px !important;
+}
+
+/* Imagem separada: começa totalmente fora do botão e invisível. */
+#list_surround [class^="status_"]:nth-of-type(1)::after,
+#list_surround [class^="status_"]:nth-of-type(2)::after,
+#list_surround [class^="status_"]:nth-of-type(3)::after,
+#list_surround [class^="status_"]:nth-of-type(4)::after,
+#list_surround [class^="status_"]:nth-of-type(5)::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    right: 2px !important;
+    bottom: 0 !important;
+    width: 88px !important;
+    height: 72px !important;
+    background-position: right bottom !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    opacity: 0 !important;
+    transform: translateX(100%) !important;
+    transition:
+        transform 0.38s ease,
+        opacity 0.22s ease !important;
+    pointer-events: none !important;
+    z-index: 3 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(1)::after {
+    background-image: none !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(2)::after {
+    background-image: none !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(3)::after {
+    background-image: none !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(4)::after {
+    background-image: none !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(5)::after {
+    background-image: none !important;
+}
+
+/* A personagem entra apenas quando o cursor está sobre o botão. */
+#list_surround [class^="status_"]:nth-of-type(1):hover::after,
+#list_surround [class^="status_"]:nth-of-type(2):hover::after,
+#list_surround [class^="status_"]:nth-of-type(3):hover::after,
+#list_surround [class^="status_"]:nth-of-type(4):hover::after,
+#list_surround [class^="status_"]:nth-of-type(5):hover::after {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* No hover, abre espaço visual para a imagem sem cortar o título. */
+#list_surround [class^="status_"]:nth-of-type(1):hover::before,
+#list_surround [class^="status_"]:nth-of-type(2):hover::before,
+#list_surround [class^="status_"]:nth-of-type(3):hover::before,
+#list_surround [class^="status_"]:nth-of-type(4):hover::before,
+#list_surround [class^="status_"]:nth-of-type(5):hover::before {
+    max-width: 132px !important;
+}
+
+/* =========================================================
+   MENU LATERAL — AJUSTE V3.3
+   Única alteração:
+   - menu inteiro menor;
+   - All Anime integrado como sexto botão da mesma pilha.
+   ========================================================= */
+
+/* Os seis botões passam a compartilhar exatamente o mesmo
+   tamanho, acabamento e posicionamento lateral. */
+#list_surround [class^="status_"]:nth-of-type(1),
+#list_surround [class^="status_"]:nth-of-type(2),
+#list_surround [class^="status_"]:nth-of-type(3),
+#list_surround [class^="status_"]:nth-of-type(4),
+#list_surround [class^="status_"]:nth-of-type(5),
+#list_surround [class^="status_"]:nth-of-type(6) {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(12, 4, 24, 0.92),
+            rgba(35, 11, 58, 0.88)
+        ) !important;
+    background-color: transparent !important;
+    background-size: 100% 100% !important;
+    border: 1px solid rgba(155, 82, 245, 0.66) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+    height: 56px !important;
+    width: 205px !important;
+    right: -50px !important;
+    opacity: 0.84 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    transition:
+        right 0.36s ease,
+        opacity 0.36s ease !important;
+}
+
+/* Primeiro e último botão fecham visualmente a pilha. */
+#list_surround [class^="status_"]:nth-of-type(1) {
+    border-radius: 14px 0 0 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(6) {
+    border-radius: 0 0 0 14px !important;
+}
+
+/* Posição compacta e contínua dos seis itens. */
+#list_surround [class^="status_"]:nth-of-type(1) {
+    top: 274px !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(2) {
+    top: 332px !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(3) {
+    top: 390px !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(4) {
+    top: 448px !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(5) {
+    top: 506px !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(6) {
+    top: 564px !important;
+}
+
+/* Os cinco primeiros continuam abrindo no hover.
+   All Anime também acompanha o alinhamento da pilha. */
+#list_surround [class^="status_"]:nth-of-type(1):hover,
+#list_surround [class^="status_"]:nth-of-type(2):hover,
+#list_surround [class^="status_"]:nth-of-type(3):hover,
+#list_surround [class^="status_"]:nth-of-type(4):hover,
+#list_surround [class^="status_"]:nth-of-type(5):hover,
+#list_surround [class^="status_"]:nth-of-type(6):hover {
+    right: 3px !important;
+    opacity: 1 !important;
+}
+
+/* Área clicável acompanha o tamanho reduzido. */
+#list_surround [class^="status_"]:nth-of-type(1) a,
+#list_surround [class^="status_"]:nth-of-type(2) a,
+#list_surround [class^="status_"]:nth-of-type(3) a,
+#list_surround [class^="status_"]:nth-of-type(4) a,
+#list_surround [class^="status_"]:nth-of-type(5) a,
+#list_surround [class^="status_"]:nth-of-type(6) a {
+    display: block !important;
+    height: 56px !important;
+    width: 205px !important;
+    opacity: 0 !important;
+}
+
+/* Fonte reduzida, mantendo todos os títulos completos. */
+#list_surround [class^="status_"]:nth-of-type(1)::before,
+#list_surround [class^="status_"]:nth-of-type(2)::before,
+#list_surround [class^="status_"]:nth-of-type(3)::before,
+#list_surround [class^="status_"]:nth-of-type(4)::before,
+#list_surround [class^="status_"]:nth-of-type(5)::before,
+#list_surround [class^="status_"]:nth-of-type(6)::before {
+    display: block !important;
+    position: absolute !important;
+    left: 13px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: #eee0ff !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    letter-spacing: 0.1px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    text-shadow: 0 0 6px rgba(164, 93, 255, 0.42) !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(1)::before {
+    content: "WATCHING" !important;
+}
+
+[data-work="manga"] #list_surround [class^="status_"]:nth-of-type(1)::before {
+    content: "READING" !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(2)::before {
+    content: "COMPLETED" !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(3)::before {
+    content: "ON HOLD" !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(4)::before {
+    content: "DROPPED" !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(5)::before {
+    content: "PLAN TO WATCH" !important;
+    font-size: 10.5px !important;
+}
+
+[data-work="manga"] #list_surround [class^="status_"]:nth-of-type(5)::before {
+    content: "PLAN TO READ" !important;
+    font-size: 11.5px !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(6)::before {
+    content: "ALL ANIME" !important;
+}
+
+/* Imagens menores nos cinco botões, sempre escondidas
+   antes do hover. */
+#list_surround [class^="status_"]:nth-of-type(1)::after,
+#list_surround [class^="status_"]:nth-of-type(2)::after,
+#list_surround [class^="status_"]:nth-of-type(3)::after,
+#list_surround [class^="status_"]:nth-of-type(4)::after,
+#list_surround [class^="status_"]:nth-of-type(5)::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    right: 2px !important;
+    bottom: 0 !important;
+    width: 70px !important;
+    height: 60px !important;
+    background-position: right bottom !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    opacity: 0 !important;
+    transform: translateX(100%) !important;
+    transition:
+        transform 0.36s ease,
+        opacity 0.20s ease !important;
+    pointer-events: none !important;
+    z-index: 3 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(1):hover::after,
+#list_surround [class^="status_"]:nth-of-type(2):hover::after,
+#list_surround [class^="status_"]:nth-of-type(3):hover::after,
+#list_surround [class^="status_"]:nth-of-type(4):hover::after,
+#list_surround [class^="status_"]:nth-of-type(5):hover::after {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* All Anime agora pertence à pilha e usa a mesma dimensão.
+   A miniatura permanece visível à direita. */
+#list_surround [class^="status_"]:nth-of-type(6)::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 68px !important;
+    height: 56px !important;
+    background-image: none !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: none !important;
+    z-index: 3 !important;
+}
+
+/* =========================================================
+   MENU LATERAL — AJUSTE V3.4
+   Corrige somente a imagem de ALL ANIME.
+   ========================================================= */
+
+/* No estado recolhido, a imagem fica totalmente dentro da
+   parte visível do botão. */
+#list_surround [class^="status_"]:nth-of-type(6)::after {
+    right: 50px !important;
+    bottom: 1px !important;
+    width: 62px !important;
+    height: 54px !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    border-left: 1px solid rgba(166, 96, 255, 0.35) !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: right 0.36s ease !important;
+}
+
+/* Quando o botão abre, a imagem desliza para a extremidade
+   direita sem ultrapassar a borda. */
+#list_surround [class^="status_"]:nth-of-type(6):hover::after {
+    right: 1px !important;
+}
+
+/* =========================================================
+   MENU LATERAL — AJUSTE V3.5
+   Corrige somente o comportamento de ALL ANIME.
+   A imagem agora funciona exatamente como as demais:
+   escondida quando recolhido e visível somente no hover.
+   ========================================================= */
+
+#list_surround [class^="status_"]:nth-of-type(6)::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    right: 2px !important;
+    bottom: 0 !important;
+    width: 70px !important;
+    height: 60px !important;
+    background-image: none !important;
+    background-position: right center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    border-left: 0 !important;
+    opacity: 0 !important;
+    transform: translateX(100%) !important;
+    transition:
+        transform 0.36s ease,
+        opacity 0.20s ease !important;
+    pointer-events: none !important;
+    z-index: 3 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(6):hover::after {
+    right: 2px !important;
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* =========================================================
+   FUNDO WIDESCREEN — AJUSTE V3.6
+   Altera somente a imagem de fundo.
+   ========================================================= */
+
+html {
+    min-height: 100% !important;
+    background-color: #07030f !important;
+    background-image: url("https://raw.githubusercontent.com/Hyouem/mal-tbate-theme/main/assets/arthur-background-widescreen.jpg") !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+body {
+    min-height: 100vh !important;
+    background-color: transparent !important;
+    background-image:
+        linear-gradient(
+            rgba(7, 2, 15, 0.08),
+            rgba(7, 2, 15, 0.12)
+        ),
+        url("https://raw.githubusercontent.com/Hyouem/mal-tbate-theme/main/assets/arthur-background-widescreen.jpg") !important;
+    background-position: center center, center center !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-size: cover, cover !important;
+    background-attachment: fixed, fixed !important;
+}
+
+/* Remove camadas de fundo adicionadas por versões anteriores. */
+body::before {
+    content: none !important;
+    display: none !important;
+}
+
+/* =========================================================
+   TBATE MINIMAL — AJUSTE V3.7
+   Remove imagens do menu e dos cabeçalhos.
+   Mantém o fundo widescreen e a lista translúcida.
+   ========================================================= */
+
+/* CABEÇALHOS DAS CATEGORIAS */
+
+[class^="header_"] {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(37, 13, 58, 0.18) 24%,
+            rgba(37, 13, 58, 0.28) 50%,
+            rgba(37, 13, 58, 0.18) 76%,
+            transparent
+        ) !important;
+    background-image:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(37, 13, 58, 0.18) 24%,
+            rgba(37, 13, 58, 0.28) 50%,
+            rgba(37, 13, 58, 0.18) 76%,
+            transparent
+        ) !important;
+    border: 0 !important;
+    border-top: 1px solid rgba(176, 104, 255, 0.20) !important;
+    border-bottom: 1px solid rgba(176, 104, 255, 0.20) !important;
+    box-shadow: none !important;
+    height: 74px !important;
+    margin-top: 18px !important;
+    overflow: visible !important;
+    position: relative !important;
+}
+
+[class^="header_"] * {
+    background: transparent !important;
+    background-image: none !important;
+    height: 74px !important;
+    line-height: 74px !important;
+    padding: 0 !important;
+}
+
+.header_title {
+    display: none !important;
+}
+
+.header_cw::before,
+.header_completed::before,
+.header_onhold::before,
+.header_dropped::before,
+.header_ptw::before {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+}
+
+.header_cw::after,
+.header_completed::after,
+.header_onhold::after,
+.header_dropped::after,
+.header_ptw::after {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    color: #f0e5ff !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    letter-spacing: 3px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    text-shadow:
+        0 0 8px rgba(178, 106, 255, 0.42),
+        0 2px 3px rgba(0, 0, 0, 0.72) !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
+}
+
+.header_cw::after {
+    content: "WATCHING" !important;
+}
+
+[data-work="manga"] .header_cw::after {
+    content: "READING" !important;
+}
+
+.header_completed::after {
+    content: "COMPLETED" !important;
+}
+
+.header_onhold::after {
+    content: "ON HOLD" !important;
+}
+
+.header_dropped::after {
+    content: "DROPPED" !important;
+}
+
+.header_ptw::after {
+    content: "PLAN TO WATCH" !important;
+    font-size: 22px !important;
+}
+
+[data-work="manga"] .header_ptw::after {
+    content: "PLAN TO READ" !important;
+    font-size: 23px !important;
+}
+
+/* MENU LATERAL SEM IMAGENS */
+
+#list_surround [class^="status_"]:nth-of-type(1),
+#list_surround [class^="status_"]:nth-of-type(2),
+#list_surround [class^="status_"]:nth-of-type(3),
+#list_surround [class^="status_"]:nth-of-type(4),
+#list_surround [class^="status_"]:nth-of-type(5),
+#list_surround [class^="status_"]:nth-of-type(6) {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 3, 20, 0.78),
+            rgba(34, 11, 55, 0.68)
+        ) !important;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(10, 3, 20, 0.78),
+            rgba(34, 11, 55, 0.68)
+        ) !important;
+    border: 1px solid rgba(160, 88, 245, 0.48) !important;
+    box-shadow: none !important;
+    width: 190px !important;
+    height: 50px !important;
+    right: -42px !important;
+    opacity: 0.82 !important;
+    overflow: hidden !important;
+    transition:
+        right 0.34s ease,
+        opacity 0.34s ease,
+        background-color 0.34s ease !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(1) {
+    top: 274px !important;
+    border-radius: 13px 0 0 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(2) {
+    top: 326px !important;
+    border-radius: 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(3) {
+    top: 378px !important;
+    border-radius: 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(4) {
+    top: 430px !important;
+    border-radius: 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(5) {
+    top: 482px !important;
+    border-radius: 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(6) {
+    top: 534px !important;
+    border-radius: 0 0 0 13px !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(1):hover,
+#list_surround [class^="status_"]:nth-of-type(2):hover,
+#list_surround [class^="status_"]:nth-of-type(3):hover,
+#list_surround [class^="status_"]:nth-of-type(4):hover,
+#list_surround [class^="status_"]:nth-of-type(5):hover,
+#list_surround [class^="status_"]:nth-of-type(6):hover {
+    right: 3px !important;
+    opacity: 1 !important;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(29, 8, 48, 0.92),
+            rgba(74, 29, 111, 0.84)
+        ) !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(1) a,
+#list_surround [class^="status_"]:nth-of-type(2) a,
+#list_surround [class^="status_"]:nth-of-type(3) a,
+#list_surround [class^="status_"]:nth-of-type(4) a,
+#list_surround [class^="status_"]:nth-of-type(5) a,
+#list_surround [class^="status_"]:nth-of-type(6) a {
+    display: block !important;
+    width: 190px !important;
+    height: 50px !important;
+    opacity: 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(1)::after,
+#list_surround [class^="status_"]:nth-of-type(2)::after,
+#list_surround [class^="status_"]:nth-of-type(3)::after,
+#list_surround [class^="status_"]:nth-of-type(4)::after,
+#list_surround [class^="status_"]:nth-of-type(5)::after,
+#list_surround [class^="status_"]:nth-of-type(6)::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    background-image: none !important;
+    opacity: 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(1)::before,
+#list_surround [class^="status_"]:nth-of-type(2)::before,
+#list_surround [class^="status_"]:nth-of-type(3)::before,
+#list_surround [class^="status_"]:nth-of-type(4)::before,
+#list_surround [class^="status_"]:nth-of-type(5)::before,
+#list_surround [class^="status_"]:nth-of-type(6)::before {
+    display: block !important;
+    position: absolute !important;
+    left: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: #f0e5ff !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.7px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    text-shadow:
+        0 0 7px rgba(175, 101, 255, 0.38),
+        0 1px 2px rgba(0, 0, 0, 0.72) !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(1)::before {
+    content: "WATCHING" !important;
+}
+
+[data-work="manga"] #list_surround [class^="status_"]:nth-of-type(1)::before {
+    content: "READING" !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(2)::before {
+    content: "COMPLETED" !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(3)::before {
+    content: "ON HOLD" !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(4)::before {
+    content: "DROPPED" !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(5)::before {
+    content: "PLAN TO WATCH" !important;
+    font-size: 10px !important;
+}
+
+[data-work="manga"] #list_surround [class^="status_"]:nth-of-type(5)::before {
+    content: "PLAN TO READ" !important;
+    font-size: 10.5px !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(6)::before {
+    content: "ALL ANIME" !important;
+}
+
+/* LISTA TRANSLÚCIDA */
+
+.table_header,
+.category_totals {
+    background: rgba(12, 4, 23, 0.26) !important;
+    backdrop-filter: blur(2px);
+}
+
+.td1,
+.td2 {
+    background: rgba(11, 3, 20, 0.20) !important;
+    backdrop-filter: blur(2px);
+}
+
+.td2 {
+    background: rgba(18, 6, 30, 0.16) !important;
+}
+
+tr:hover .td1,
+tr:hover .td2 {
+    background: rgba(55, 20, 84, 0.30) !important;
+}
+
+/* =========================================================
+   POSICIONAMENTO — AJUSTE V3.8
+   Altera somente:
+   - lista para o lado direito;
+   - menu lateral para o lado esquerdo.
+   ========================================================= */
+
+/* Lista principal posicionada na área direita da tela. */
+#list_surround {
+    left: auto !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Move os seis botões do menu para a lateral esquerda. */
+#list_surround [class^="status_"]:nth-of-type(1),
+#list_surround [class^="status_"]:nth-of-type(2),
+#list_surround [class^="status_"]:nth-of-type(3),
+#list_surround [class^="status_"]:nth-of-type(4),
+#list_surround [class^="status_"]:nth-of-type(5),
+#list_surround [class^="status_"]:nth-of-type(6) {
+    right: auto !important;
+    left: -42px !important;
+}
+
+/* Ao passar o mouse, o menu abre para a direita. */
+#list_surround [class^="status_"]:nth-of-type(1):hover,
+#list_surround [class^="status_"]:nth-of-type(2):hover,
+#list_surround [class^="status_"]:nth-of-type(3):hover,
+#list_surround [class^="status_"]:nth-of-type(4):hover,
+#list_surround [class^="status_"]:nth-of-type(5):hover,
+#list_surround [class^="status_"]:nth-of-type(6):hover {
+    right: auto !important;
+    left: 3px !important;
+}
+
+/* Espelha os cantos arredondados para o lado esquerdo da tela. */
+#list_surround [class^="status_"]:nth-of-type(1) {
+    border-radius: 0 13px 0 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(2),
+#list_surround [class^="status_"]:nth-of-type(3),
+#list_surround [class^="status_"]:nth-of-type(4),
+#list_surround [class^="status_"]:nth-of-type(5) {
+    border-radius: 0 !important;
+}
+
+#list_surround [class^="status_"]:nth-of-type(6) {
+    border-radius: 0 0 13px 0 !important;
+}
+
+/* Mantém os títulos completamente visíveis quando recolhidos. */
+#list_surround [class^="status_"]:nth-of-type(1)::before,
+#list_surround [class^="status_"]:nth-of-type(2)::before,
+#list_surround [class^="status_"]:nth-of-type(3)::before,
+#list_surround [class^="status_"]:nth-of-type(4)::before,
+#list_surround [class^="status_"]:nth-of-type(5)::before,
+#list_surround [class^="status_"]:nth-of-type(6)::before {
+    left: auto !important;
+    right: 15px !important;
+    text-align: right !important;
+}
+
+/* =========================================================
+   LARGURA DA PÁGINA — AJUSTE V3.9
+   Remove somente o scroll horizontal.
+   ========================================================= */
+
+/* Impede qualquer elemento de ampliar a largura da página. */
+html,
+body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Mantém a lista no lado direito, mas sem ultrapassar
+   a largura visível do navegador. */
+#list_surround {
+    left: auto !important;
+    right: 0 !important;
+    width: 700px !important;
+    max-width: calc(100vw - 205px) !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Tabelas e cabeçalhos respeitam a largura do container. */
+#list_surround > table,
+#list_surround table,
+#list_surround [class^="header_"],
+#grand_totals,
+.category_totals {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Evita que células ou títulos longos forcem a página
+   a crescer horizontalmente. */
+#list_surround td,
+#list_surround th {
+    box-sizing: border-box !important;
+}
+
+#list_surround td:nth-of-type(2),
+#list_surround th:nth-of-type(2) {
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+}
+
+/* O rodapé antigo usa width: 100% com padding, o que pode
+   gerar alguns pixels extras de largura. */
+#copyright,
+#copyright:hover {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Segurança adicional para a barra superior do MAL. */
+#mal_control_strip,
+#mal\_control\_strip {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+}
