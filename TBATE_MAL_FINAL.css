@@ -1238,3 +1238,97 @@ td#mal\_cs\_pic a img {
 #list_surround td {
     z-index: auto !important;
 }
+
+/* =========================================================
+   TRANSPARÊNCIA DAS LISTAS — AJUSTE V4.4
+   Remove somente a camada escura atrás das tabelas.
+   ========================================================= */
+
+/* Cabeçalhos das colunas e totais sem fundo escuro. */
+.table_header,
+.category_totals {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
+/* Linhas completamente transparentes para mostrar o fundo. */
+.td1,
+.td2 {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
+/* Hover sem criar novamente uma faixa escura. */
+tr:hover .td1,
+tr:hover .td2 {
+    background: rgba(87, 36, 130, 0.12) !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Totais gerais também sem bloco escuro. */
+#grand_totals {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
+/* Mantém apenas separadores discretos para leitura. */
+.td1,
+.td2,
+.table_header {
+    border-bottom-color: rgba(181, 119, 255, 0.16) !important;
+}
+
+.category_totals,
+#grand_totals {
+    border-color: rgba(181, 119, 255, 0.18) !important;
+}
+
+/* =========================================================
+   LENTE ESCURA DA PRIMEIRA TELA — CORREÇÃO V4.5
+   Remove somente a camada aplicada ao body.
+   O fundo passa a ser controlado exclusivamente pelo html,
+   permanecendo idêntico durante toda a rolagem.
+   ========================================================= */
+
+html {
+    min-height: 100% !important;
+    background-color: #07030f !important;
+    background-image:
+        url("https://raw.githubusercontent.com/Hyouem/mal-tbate-theme/main/assets/arthur-background-widescreen.jpg") !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+/* Remove o degradê/lente e também a segunda cópia da imagem. */
+body {
+    min-height: 100% !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    background-position: initial !important;
+    background-repeat: initial !important;
+    background-size: initial !important;
+    background-attachment: initial !important;
+}
+
+/* Segurança contra qualquer pseudo-elemento de sobreposição. */
+body::before,
+body::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    background-image: none !important;
+    opacity: 0 !important;
+}
